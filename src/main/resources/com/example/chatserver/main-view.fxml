@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatserver.MainController">
+   <children>
+      <Label fx:id="infoLabel" layoutX="117.0" layoutY="36.0" text="服务器未启动">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="68.0" layoutY="82.0" prefHeight="38.0" prefWidth="218.0">
+         <children>
+            <Label text="IP地址：" />
+            <Label fx:id="ipLabel" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="61.0" layoutY="120.0" prefHeight="38.0" prefWidth="225.0">
+         <children>
+            <Label text="端口：" />
+            <Label fx:id="portLabel" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="65.0" layoutY="158.0" prefHeight="38.0" prefWidth="225.0">
+         <children>
+            <Label text="在线用户数：" />
+            <Label fx:id="userNumLabel" />
+         </children>
+      </HBox>
+      <Button fx:id="startButton" layoutX="136.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#clickStartButton" text="启动服务器" />
+      <ListView fx:id="onlineUserListView" layoutX="267.0" layoutY="50.0" prefHeight="250.0" prefWidth="133.0" />
+      <Button fx:id="logoutUserButton" layoutX="334.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#clickLogoutUserButton" text="下线用户" />
+      <Label layoutX="298.0" layoutY="29.0" text="在线用户列表" />
+      <TextArea fx:id="systemMsg" layoutY="224.0" prefHeight="76.0" prefWidth="267.0" />
+      <Button fx:id="sendButton" layoutX="177.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#clickSendButton" text="群发系统消息" />
+   </children>
+</Pane>
